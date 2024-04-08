@@ -3,6 +3,7 @@ import streamlit as st
 #from snowflake.snowpark.context import get_active_session
 from snowflake.snowpark.functions import col
 
+
 # Write directly to the app
 st.title(":cup_with_straw  Customize your Smoothie: :cup_with_straw")
 st.write(
@@ -57,3 +58,6 @@ if ingredients_list:
 
 
     
+import requests
+fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
+st.text(fruityvice_response)
